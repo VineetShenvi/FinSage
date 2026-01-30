@@ -3,6 +3,10 @@ import trafilatura
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 from langchain_community.utilities import SerpAPIWrapper
+import os
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+serpapi_api_key = os.getenv("SERPAPI_API_KEY")
 
 # ---------- helpers ----------
 
@@ -93,7 +97,7 @@ def process_serp_results(results: dict, max_articles: int = 20) -> list[dict]:
 
 def search_scrape(company: str):
     serp = SerpAPIWrapper(
-        serpapi_api_key="e6f2c34264da76b4039232f15c32817bf14c5750e50cf429b774ae484f866a7e",
+        serpapi_api_key=serpapi_api_key,
         params={
             "engine": "google_news",
             "num": 50,
