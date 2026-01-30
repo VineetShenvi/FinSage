@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+streamlit
+langchain
+langgraph
+langchain-community
+langchain-openai
+faiss-cpu
+pydantic
+python-dotenv
+requests
+duckduckgo-search
+newspaper3k
+beautifulsoup4
+lxml
