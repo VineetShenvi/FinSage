@@ -6,7 +6,7 @@ from langchain_community.utilities import SerpAPIWrapper
 import os
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
-serpapi_api_key = os.getenv("SERPAPI_API_KEY")
+serpapi_api_key = os.getenv("SERP_API_KEY")
 
 print(serpapi_api_key)
 
