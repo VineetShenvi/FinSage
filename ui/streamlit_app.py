@@ -1,6 +1,14 @@
 import streamlit as st
 import requests
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+uri = os.getenv("BACKEND_URL")
+print(uri)
+
 st.set_page_config(page_title="Investment Research AI")
 
 st.title("📈 Autonomous Investment Research")
@@ -10,7 +18,7 @@ company = st.text_input("Enter company name")
 if st.button("Analyze"):
     with st.spinner("Running agent workflow..."):
         res = requests.post(
-            "http://localhost:8000/analyze",
+            uri,
             json={"company": company}
         ).json()
 
