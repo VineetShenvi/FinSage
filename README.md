@@ -1,4 +1,3 @@
-8
 
 # FinSage: AI-Powered Company Research & Analysis Agent
 
