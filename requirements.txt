@@ -17,3 +17,4 @@ trafilatura
 beautifulsoup4
 requests
 serpapi
+google-search-results
