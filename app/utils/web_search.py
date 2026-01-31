@@ -8,6 +8,8 @@ import os
 openai_api_key = os.getenv("OPENAI_API_KEY")
 serpapi_api_key = os.getenv("SERPAPI_API_KEY")
 
+print(serpapi_api_key)
+
 # ---------- helpers ----------
 
 def fetch_html(url: str) -> str | None:

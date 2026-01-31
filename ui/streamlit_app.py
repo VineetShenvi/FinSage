@@ -25,6 +25,7 @@ if st.button("Analyze"):
         try:
             res = response.json()
         except ValueError:
+            
             st.error("Response was not valid JSON")
             st.text(response.text)
             st.stop()
