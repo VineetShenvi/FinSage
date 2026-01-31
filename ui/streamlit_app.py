@@ -20,12 +20,12 @@ if st.button("Analyze"):
         response = requests.post(
         uri,
         json={"company": company},
-        timeout=30
+        timeout=120
         )
         try:
             res = response.json()
         except ValueError:
-            
+
             st.error("Response was not valid JSON")
             st.text(response.text)
             st.stop()
