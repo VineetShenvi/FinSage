@@ -17,6 +17,11 @@ company = st.text_input("Enter company name")
 
 if st.button("Analyze"):
     with st.spinner("Running agent workflow..."):
+        response = requests.post(
+        uri,
+        json={"company": company},
+        timeout=30
+        )
         try:
             res = response.json()
         except ValueError:
