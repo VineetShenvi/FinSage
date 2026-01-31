@@ -17,10 +17,12 @@ company = st.text_input("Enter company name")
 
 if st.button("Analyze"):
     with st.spinner("Running agent workflow..."):
-        res = requests.post(
-            uri,
-            json={"company": company}
-        ).json()
+        try:
+            res = response.json()
+        except ValueError:
+            st.error("Response was not valid JSON")
+            st.text(response.text)
+            st.stop()
 
     st.subheader("📊 Financial Analysis")
     st.write(res["financial_analysis"])
